@@ -1,0 +1,28 @@
+{
+  "name": "octoherd-script-fix-test-workflow-octokit",
+  "version": "0.0.0-development",
+  "type": "module",
+  "exports": "./script.js",
+  "bin": {
+    "octoherd-script-fix-test-workflow-octokit": "./cli.js"
+  },
+  "description": "fixes workflows in octokit in a programmatic way",
+  "scripts": {
+    "start": "node cli.js",
+    "test": "node script.js"
+  },
+  "repository": "https://github.com/oscard0m/octoherd-script-fix-test-workflow-octokit",
+  "keywords": [
+    "octoherd-script"
+  ],
+  "author": "Oscar Dominguez <dominguez.celada@gmail.com> (https://www.oscardom.dev)",
+  "license": "ISC",
+  "dependencies": {
+    "@octoherd/cli": "^3.4.10"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  }
+}
