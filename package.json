@@ -18,7 +18,10 @@
   "author": "Oscar Dominguez <dominguez.celada@gmail.com> (https://www.oscardom.dev)",
   "license": "ISC",
   "dependencies": {
-    "@octoherd/cli": "^3.4.10"
+    "@octoherd/cli": "^3.4.10",
+    "js-yaml": "^4.1.0",
+    "octokit-plugin-create-pull-request": "^3.12.2",
+    "prettier": "^2.7.1"
   },
   "release": {
     "branches": [
