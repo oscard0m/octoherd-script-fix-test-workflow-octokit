@@ -20,15 +20,11 @@ export function fixTestWorkflow({ content, encoding }) {
     jobs.test.needs === "test_matrix" &&
     !jobs.test.if
   ) {
-    jobs.test.if = "${{ always }}";
+    jobs.test.if = "${{ always() }}";
     jobs.test.steps.unshift({
       run: "exit 1",
       if: "${{ needs.test_matrix.result != 'success' }}",
     });
-
-    console.log(
-      prettier.format(JSON.stringify(yamlDocument), { parser: "json" })
-    );
 
     const updatedContent = prettier.format(dump(yamlDocument, {}), {
       parser: "yaml",
